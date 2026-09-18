@@ -1,12 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rsschool-landing-page</title>
-  </head>
-  <body>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rsschool-landing-page</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="logo">
+        <img src="./src/images/logo.svg" alt="logo" class="logo__image">
+      </a>
+      <nav class="header__nav">
+        <a href="index.html#about" class="header__nav__link">Favorite coffee</a>
+        <a href="index.html#features" class="header__nav__link">About</a>
+        <a href="index.html#pricing" class="header__nav__link">Mobile app</a>
+        <a href="index.html#contacts" class="header__nav__link">Contact us</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+          <div class="theme-toggle__knob"></div>
+          <div class="theme-toggle__option theme-toggle__option_light"></div>
+          <div class="theme-toggle__option theme-toggle__option_dark"></div>
+        </button>
+
+        <button class="burger" id="burger" aria-label="Меню">
+           <hr><hr>
+        </button>
+
+        <a href="/menu.html" class="header__nav__link menu__button" id="menu-button">
+          Меню <img src="./src/images/coffee-cup_dark.svg">
+        </a>
+      </div>
+  </header>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>

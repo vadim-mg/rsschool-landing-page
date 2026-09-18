@@ -1,0 +1,53 @@
+.theme-toggle {
+    gap: 8px;
+    angle: 0 deg;
+    opacity: 1;
+    border-width: 1px;
+    border-radius: 100px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    // .theme-toggle__knob
+
+    &__knob {}
+
+    // .theme-toggle__option
+
+    &__option {
+        width: 2rem;
+        height: 2rem;
+        angle: 0 deg;
+        opacity: 1;
+        border-radius: 100px;
+        padding: 1px;
+        display: flex;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+
+        &_light {
+            background-image: url('@/images/light_full.svg');
+        }
+
+        &_dark {
+            background-image: url('@/images/dark.svg');
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover &__option {
+
+        &_light {
+        }
+
+        &_dark {
+            background-image: url('@/images/dark_invert.svg');
+        }
+    }
+}

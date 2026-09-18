@@ -1,7 +1,10 @@
 @use 'fonts';
-@use 'variables' as v;
+// @use 'shared' as *;
 @use 'base';
+@use 'components/logo';
+@use 'components/theme-toggle';
+@use 'sections/header';
 
-h1 {
-    color: v.$color-primary;
-}
+.nav {}
+
+
