@@ -1,4 +1,6 @@
+@use 'fonts';
 @use 'variables' as v;
+@use 'base';
 
 h1 {
     color: v.$color-primary;
