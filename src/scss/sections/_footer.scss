@@ -1,0 +1,173 @@
+@use '../shared' as *;
+
+.footer {
+    margin: 0;
+    padding: 0;
+
+    // .footer__content
+
+    &__content {
+        padding: 100px;
+        background-color: $bg-container-color;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        border-radius: 40px;
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__header {
+        color: $bg-primary-color;
+        padding: 0;
+    }
+
+    // .footer__content-column
+
+    &__content-column {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+.social-media-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-media-item {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    border-radius: 100px;
+    border: 1px solid $border-primary-color;
+    display: block;
+    color: $border-primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center; // .social-media-icon_twitter
+
+    &:hover {
+        background: #292826;
+    }
+}
+
+.social-media-icon {
+    width: 24px;
+    height: 24px;
+
+    background-color: $text-inverse-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    // .social-media-icon_twitter
+
+    &_twitter {
+        -webkit-mask-image: url('@/images/icons/twitter.svg');
+        mask-image: url('@/images/icons/twitter.svg');
+    }
+
+    // .social-media-icon_instagram
+
+    &_instagram {
+        -webkit-mask-image: url('@/images/icons/instagram.svg');
+        mask-image: url('@/images/icons/instagram.svg');
+    }
+
+    // .social-media-icon_facebook
+
+    &_facebook {
+        -webkit-mask-image: url('@/images/icons/facebook.svg');
+        mask-image: url('@/images/icons/facebook.svg');
+    }
+}
+
+.contacts {
+    color: $bg-primary-color;
+    font-family: Inter;
+    font-style: Semi Bold;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+    // .contacts_address
+    &__contact {
+        font-size: 16px;
+        line-height: 150%;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: -2rem;
+        }
+
+    }
+
+    &__link {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        color: #E1D4C9;
+    }
+
+    &_address {
+        &::before {
+            content: url('@/images/icons/pin-alt.svg');
+        }
+    }
+
+    // .contacts_phone
+
+    &_phone {
+        &::before {
+            content: url('@/images/icons/phone.svg');
+        }
+
+    }
+
+    // .contacts_worktime
+
+    &_worktime {
+        &::before {
+            content: url('@/images/icons/worktime.svg');
+        }
+
+    }
+
+    // .contacts__header
+
+    &__header {
+        color: $bg-primary-color;
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 24px;
+        line-height: 125%;
+        margin: 0;
+        padding: 0;
+
+    }
+}
