@@ -1,0 +1,101 @@
+@use '../shared' as *;
+
+.menu__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu-filters {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &__button {
+        // width: 200px;
+        height: 46px;
+        border-radius: 100px;
+        border-width: 1px;
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 8px;
+
+        justify-items: start;
+        align-items: center;
+        align-content: center;
+        color: $bg-container-color;
+
+
+
+        &-icon {
+            display: block;
+            width: 30px;
+            height: 30px;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            align-self: center;
+            justify-self: end;
+
+            background-color: #C1B6AD;
+            border-radius: 50%;
+
+
+
+
+            // .icon_apple
+
+            &_coffee {
+                background-image: url('@/images/icons/coffee.png');
+            }
+            &_tea {
+                background-image: url('@/images/icons/tea.png');
+            }
+            &_desert {
+                background-image: url('@/images/icons/desert.png');
+            }
+
+        }
+
+        &:hover {
+            background-color: $border-inverse-color;
+            color: $text-inverse-color;
+            cursor: pointer;
+
+            .download__button-icon {
+                background-color: $text-inverse-color;
+            }
+        }
+
+        // .download__button-text
+
+        &-text {
+            font-family: Inter;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 10px;
+            line-height: 140%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        // .download__button-caption
+
+        &-caption {
+            font-family: Inter;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
+
+        }
+    }
+}
+
+.menu-cards {
+    flex-grow: 2;
+}

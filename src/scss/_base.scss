@@ -27,10 +27,12 @@
 .page {
     margin: 0;
     padding-top: 20px;
+    min-height: 100vh;
     color: $text-primary-color;
     background-color: $bg-primary-color;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
 
     &__title {
@@ -52,6 +54,10 @@
         &_h2 {
             font-size: 60px;
             padding-bottom: 40px;
+        }
+
+        &_center{
+            text-align: center;
         }
     }
 
@@ -77,4 +83,5 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex-grow: 2;
 }
