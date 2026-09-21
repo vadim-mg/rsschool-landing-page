@@ -1,0 +1,134 @@
+@use '../shared' as *;
+
+.download {
+    color: $bg-container-color;
+
+    // .download__content
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            gap: 100px;
+        }
+    }
+
+    // .download__content-column
+
+    &__content-column {
+        max-width: 630px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // gap: 40px;
+    }
+
+    // .download__buttons
+
+    &__buttons {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    // .download__image
+
+    &__image {
+        max-width: 100%;
+    }
+
+    // .donwload__button
+
+    &__button {
+        width: 200px;
+        height: 64px;
+        border-radius: 100px;
+        border-width: 1px;
+        display: grid;
+        grid-template-columns: 3.5rem 1fr;
+        column-gap: 8px;
+        grid-template-rows: 14px 24px;
+        grid-template-areas:
+            "icon ."
+            "icon .";
+        justify-items: start;
+        align-items: center;
+        align-content: center;
+        color: $bg-container-color;
+
+
+
+        &-icon {
+            grid-area: icon;
+            display: block;
+            width: 36px;
+            height: 36px;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            align-self: center;
+            justify-self: end;
+
+            background-color: $text-primary-color;
+
+
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+
+
+            // .icon_apple
+
+            &_apple {
+                -webkit-mask-image: url('@/images/content/icon_apple.svg');
+                mask-image: url('@/images/content/icon_apple.svg');
+            }
+
+            &_google {
+                -webkit-mask-image: url('@/images/content/icon_google.svg');
+                mask-image: url('@/images/content/icon_google.svg');
+            }
+        }
+
+        &:hover {
+            background-color: $border-inverse-color;
+            color: $text-inverse-color;
+            cursor: pointer;
+
+            .download__button-icon {
+                background-color: $text-inverse-color;
+            }
+        }
+
+        // .download__button-text
+
+        &-text {
+            font-family: Inter;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 10px;
+            line-height: 140%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        // .download__button-caption
+
+        &-caption {
+            font-family: Inter;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
+
+        }
+    }
+
+}
