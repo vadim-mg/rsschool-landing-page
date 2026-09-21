@@ -1,0 +1,15 @@
+@use 'fonts';
+// @use 'shared' as *;
+@use 'base';
+@use 'components/logo';
+@use 'components/theme-toggle';
+@use 'components/slider';
+
+@use 'sections/header';
+@use 'sections/hero';
+@use 'sections/favorite-coffee';
+
+
+.nav {}
+
+

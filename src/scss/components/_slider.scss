@@ -1,0 +1,138 @@
+@use '../shared' as *;
+
+.slider {
+    font-family: Inter;
+    font-style: Semi Bold;
+    letter-spacing: 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    // .slider__slides
+
+    &__slides {
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    // .slider__slide
+
+    &__slide {
+        display: none;
+        // .slieder__slide_active
+
+        &_active {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+    }
+
+    // .slider__image-container
+
+    &__image-container {}
+
+    // .slider__image
+
+    &__image {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    // .slider__caption
+
+    &__caption {
+        font-size: 24px;
+        line-height: 125%;
+        font-weight: 600;
+    }
+
+    // .slider__description
+
+    &__description {
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    // .slider__price
+
+    &__price {
+        font-size: 24px;
+        line-height: 125%;
+        font-weight: 600;
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .slider__button
+
+    &__button {
+        width: 60px;
+        height: 60px;
+        opacity: 1;
+        border-radius: 100px;
+        border-width: 1px;
+        border-color: $bg-container-color;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include mobile {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $bg-container-color;
+            background-image: url('@/images/arrow_invert.svg');
+        }
+
+
+        // .slider__button_prev
+
+        &_prev {
+            background-image: url('@/images/arrow.svg');
+            transform: rotate(180deg);
+        }
+
+        // .slider__button_next
+
+        &_next {
+            background-image: url('@/images/arrow.svg');
+
+        }
+    }
+
+    // .slider__pagination
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    // .slider__pagination-item
+
+    &__pagination-item {
+        width: 40px;
+        height: 4px;
+        opacity: 1;
+        border-radius: 100px;
+        background-color: $border-primary-color;
+
+        &_active {
+            background-color: $border-inverse-color;
+        }
+    }
+
+    // .slider__button
+
+    &__button {}
+}

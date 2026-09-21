@@ -1,0 +1,16 @@
+@use '../shared' as *;
+
+
+.favorite-coffee {
+
+
+    // .favorite-coffee__content
+
+    &__content {
+        color: $text-primary-color;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+

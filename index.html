@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rsschool-landing-page</title>
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="logo">
+        <img src="./src/images/logo.svg" alt="logo" class="logo__image">
+      </a>
+      <nav class="header__nav">
+        <a href="index.html#about" class="header__nav__link">Favorite coffee</a>
+        <a href="index.html#features" class="header__nav__link">About</a>
+        <a href="index.html#pricing" class="header__nav__link">Mobile app</a>
+        <a href="index.html#contacts" class="header__nav__link">Contact us</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+          <div class="theme-toggle__knob"></div>
+          <div class="theme-toggle__option theme-toggle__option_light"></div>
+          <div class="theme-toggle__option theme-toggle__option_dark"></div>
+        </button>
+
+        <button class="burger" id="burger" aria-label="Меню">
+          <hr>
+          <hr>
+        </button>
+
+        <a href="/menu.html" class="header__nav__link menu__button" id="menu-button">
+          Меню <img src="./src/images/coffee-cup_dark.svg">
+        </a>
+      </div>
+  </header>
+
+  <main class="content">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__card">
+          <div class="hero__content">
+            <h1 class="page__title page__title_h1">
+              <span class="page__title-accent">Enjoy</span> premium coffee at our charming cafe
+            </h1>
+            <p class="page__subtitle">
+              With its inviting atmosphere and delicious coffee options, the Coffee
+              House Resource is a popular destination for coffee lovers and those
+              seeking a warm and inviting space to enjoy their favorite beverage.
+            </p>
+            <a href="/menu.html" class="hero__cta">Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="favorite-coffee">
+      <div class="container">
+        <div class="favorite-coffee__content">
+          <h2 class="page__title page__title_h2">Choose your <span class="page__title-accent">favorite</span> coffee
+          </h2>
+          <div class="slider">
+            <div class="slider__controls">
+              <button class="slider__button slider__button_prev"></button>
+              <div class="slider__slides">
+                <div class="slider__slide slider__slide_active">
+                  <div class="slider__image-container">
+                    <img class="slider__image" src="./src/images/slider/coffee-slider-1.png" alt="S’mores Frappuccino">
+                  </div>
+                  <div class="slider__caption">S’mores Frappuccino</div>
+                  <div class="slider__description">This new drink takes an espresso and mixes it with brown sugar and
+                    cinnamon before being topped with oat milk.</div>
+                  <div class="slider__price">$5.50</div>
+                </div>
+                <div class="slider__slide">
+                  <div class="slider__image-container">
+                    <img class="slider__image" src="./src/images/slider/coffee-slider-1.png" alt="S’mores Frappuccino">
+                  </div>
+                  <div class="slider__caption">S’mores Frappuccino</div>
+                  <div class="slider__description">This new drink takes an espresso and mixes it with brown sugar and
+                    cinnamon before being topped with oat milk.</div>
+                  <div class="slider__price">$5.50</div>
+                </div>
+                <div class="slider__slide">
+                  <div class="slider__image-container">
+                    <img class="slider__image" src="./src/images/slider/coffee-slider-1.png" alt="S’mores Frappuccino">
+                  </div>
+                  <div class="slider__caption">S’mores Frappuccino</div>
+                  <div class="slider__description">This new drink takes an espresso and mixes it with brown sugar and
+                    cinnamon before being topped with oat milk.</div>
+                  <div class="slider__price">$5.50</div>
+                </div>
+              </div>
+              <button class="slider__button slider__button_next"></button>
+            </div>
+            <div class="slider__pagination">
+              <div class="slider__pagination-item slider__pagination-item_active"></div>
+              <div class="slider__pagination-item"></div>
+              <div class="slider__pagination-item"></div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+@use '../shared' as *;
+
+.hero {
+}
+
+.hero__card {
+  border-radius: 40px;
+  overflow: hidden;
+  max-height: 644px;
+  display: flex;
+  align-items: center;
+  background: url('@/images/img-hero.jpg') center / cover no-repeat;
+  padding: 100px;
+
+  @include tablet {
+    padding-left: 60px;
+  }
+
+  @include mobile {
+    padding: 60px 16px;
+  }
+}
+
+.hero__content {
+  max-width: 530px;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.hero__cta {
+  background: $bg-primary-color;
+  color: $text-primary-color;
+
+  width: 200px;
+  height: 64px;
+  display: block;
+  box-sizing: border-box;
+  opacity: 1;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    &::after {
+      content: url('@/images/coffee-cup_dark.svg');
+      margin-left: 8px;
+    }
+  }
+
+  @include tablet {
+    &::after {
+      content: url('@/images/coffee-cup_dark.svg');
+      margin-left: 8px;
+    }
+  }
+}
