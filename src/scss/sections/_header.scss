@@ -1,5 +1,26 @@
 @use '../shared' as *;
 
+.menu__button {
+    display: inline-flex;
+
+    @include tablet {
+        display: none;
+    }
+
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s;
+
+    &:not(.header__nav__link_active):hover {
+        text-decoration: none;
+        border-color: currentColor;
+    }
+}
+
+
 .header {
 
     // .header__inner
@@ -34,11 +55,13 @@
             color: $bg-overlay-color;
             text-decoration: none;
 
-            &:hover {
+            &:hover,
+            &_active {
                 text-decoration: underline;
                 text-underline-offset: 5px;
-
+                cursor: pointer;
             }
+
         }
     }
 
@@ -65,7 +88,7 @@
         height: 1px;
     }
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 
@@ -78,25 +101,5 @@
 
     @include tablet {
         display: block;
-    }
-}
-
-.menu__button {
-    display: inline-flex;
-
-    @include tablet {
-        display: none;
-    }
-
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1.5px solid transparent;
-    transition: border-color 0.2s;
-
-    &:hover {
-        text-decoration: none;
-        border-color: currentColor;
     }
 }
