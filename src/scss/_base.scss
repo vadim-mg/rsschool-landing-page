@@ -7,6 +7,7 @@
 }
 
 .container {
+    box-sizing: border-box;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 40px;
@@ -14,10 +15,53 @@
     @include mobile {
         width: 100%;
         max-width: 100vw;
+        padding: 0 16px;
     }
 
     @include tablet {
         width: 100%;
         max-width: 768px;
+    }
+}
+
+.page {
+    margin: 0;
+    padding-top: 20px;
+    color: $text-primary-color;
+    
+    &__title {
+        font-family: Inter;
+        font-weight: 600;
+        line-height: 105%;
+        letter-spacing: 0%;
+        margin: 0;
+        
+        @include mobile {
+            font-size: 42px;
+            line-height: 115%;
+        }
+        &_h1 {
+            font-size: 72px;
+        }
+        &_h2 {
+            font-size: 60px;
+        }
+    }
+
+
+    &__title-accent {
+        font-style: italic;
+        font-weight: 800;
+        color: $text-accent-color;
+    }
+
+    &__subtitle {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        margin: 0;
     }
 }
