@@ -1,0 +1,75 @@
+@use '../shared' as *;
+
+.about {
+
+    // .about__content
+
+    &__content {}
+}
+
+.container {}
+
+.page {
+
+    // .page__title
+
+    &__title {
+
+        // .page__title_h2
+
+        &_h2 {}
+    }
+
+    // .page__title-accent
+
+    &__title-accent {}
+}
+
+.about__images {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-height: 1480px;
+
+    @include tablet {
+        flex-wrap: nowrap;
+        max-height: none;
+    }
+}
+
+.about__image-frame {
+
+    // .about-image_compact
+    max-width: calc(50% - 20px);
+    max-height: 590px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        max-width: 100%;
+    }
+
+    &_compact {
+        max-height: 430px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.about__image {
+    transform: scale(1.1);
+    /* Изначально увеличены на 10% (заполняем края) */
+    transition: transform 0.4s ease;
+
+    &:hover {
+        transform: scale(1);
+    }
+}
