@@ -28,23 +28,30 @@
     margin: 0;
     padding-top: 20px;
     color: $text-primary-color;
-    
+    background-color: $bg-primary-color;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
     &__title {
         font-family: Inter;
         font-weight: 600;
         line-height: 105%;
         letter-spacing: 0%;
         margin: 0;
-        
+
         @include mobile {
             font-size: 42px;
             line-height: 115%;
         }
+
         &_h1 {
             font-size: 72px;
         }
+
         &_h2 {
             font-size: 60px;
+            padding-bottom: 40px;
         }
     }
 
@@ -64,4 +71,10 @@
         letter-spacing: 0%;
         margin: 0;
     }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
