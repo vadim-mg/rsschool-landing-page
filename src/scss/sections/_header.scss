@@ -18,6 +18,13 @@
         text-decoration: none;
         border-color: currentColor;
     }
+
+    &-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: var(--menu-button-icon);
+    }
 }
 
 
@@ -52,7 +59,7 @@
             font-size: 16px;
             line-height: 150%;
             letter-spacing: 0%;
-            color: var( --bg-overlay);
+            color: var(--text-primary);
             text-decoration: none;
 
             &:hover,
@@ -92,7 +99,7 @@
         display: block;
         width: 1rem;
         height: 1px;
-        background-color: var( --text-primary);
+        background-color: var(--text-primary);
     }
 
     &:hover {

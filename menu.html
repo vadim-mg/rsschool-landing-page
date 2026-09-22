@@ -10,6 +10,14 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>rsschool-landing-page</title>
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
 </head>
 
 <body class="page">
@@ -17,7 +25,7 @@
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="logo">
-        <img src="./src/images/logo.svg" alt="logo" class="logo__image">
+        <span class="logo__image"></span>
       </a>
       <nav class="header__nav">
         <a href="index.html#favorite" class="header__nav__link">Favorite coffee</a>

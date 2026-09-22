@@ -16,6 +16,7 @@ $breakpoint-tablet: 920px;
 $breakpoint-mobile: 716px;
 
 :root {
+    color-scheme: light;
     --color-white: #{$color-white};
 
     --text-primary: #{$text-primary-color};
@@ -28,6 +29,25 @@ $breakpoint-mobile: 716px;
 
     --border-primary: #{$border-primary-color};
     --border-inverse: #{$border-inverse-color};
+
+    --logo-image-url: url('@/images/logo.svg');
+    --menu-button-icon: url('@/images/icons/coffee-cup_dark.svg');
     // ...
-    color-scheme: light;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    --text-primary: #E1D4C9; // светлый текст вместо тёмного
+    --text-inverse: #E1D4C9; // тёмный текст на светлых элементах
+    --text-accent: #B0907A; // акцент чуть светлее, чтобы читался
+
+    --bg-primary: #292826; // тёмный фон страницы
+    --bg-container: #403F3D; // контейнеры чуть светлее фона
+    --bg-overlay: #292826; // оверлей в светлых тонах
+
+    --border-primary: #665F55; // границы на тёмном
+    --border-inverse: #C1B6AD; // границы на светлом
+    --logo-image-url: url('@/images/logo-invert.svg');
+    --menu-button-icon: url('@/images/icons/coffee-cup.svg');
+
 }

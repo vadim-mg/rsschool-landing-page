@@ -1,6 +1,9 @@
+@use '../shared' as *;
 .logo {
     &__image {
+        display: block;
         width: 100px;
         height: 60px;
+        background-image: var(--logo-image-url);
     }
 }

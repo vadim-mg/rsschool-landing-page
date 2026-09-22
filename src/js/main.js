@@ -17,3 +17,13 @@ document.querySelectorAll('a[href*="#"]').forEach(a => {
         })(t0);
     };
 });
+
+/* Переключение темы */
+const toggle = document.getElementById('theme-toggle');
+
+toggle.addEventListener('click', () => {
+  const html = document.documentElement;
+  const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  html.dataset.theme = next;
+  localStorage.setItem('theme', next);
+});
