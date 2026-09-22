@@ -37,6 +37,7 @@
 
             background-position: center;
             background-repeat: no-repeat;
+            background-size: cover;
             align-self: center;
             justify-self: end;
 
@@ -51,13 +52,20 @@
             &_coffee {
                 background-image: url('@/images/icons/coffee.png');
             }
+
             &_tea {
                 background-image: url('@/images/icons/tea.png');
             }
+
             &_desert {
                 background-image: url('@/images/icons/desert.png');
             }
 
+        }
+
+        &_active {
+            color: $text-inverse-color;
+            background-color: #665F55;
         }
 
         &:hover {
@@ -98,4 +106,86 @@
 
 .menu-cards {
     flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.menu-card {
+    box-sizing: border-box;
+    width: 310px;
+    // height: 506px;
+    opacity: 1;
+    border-radius: 40px;
+    border-width: 1px;
+    border: 1px solid #C1B6AD;
+
+
+    // .menu-card__image
+
+    &__image {
+        border-radius: 40px;
+        overflow: hidden;
+
+        img {
+            transform: scale(1.1);
+            /* Изначально увеличены на 10% (заполняем края) */
+            transition: transform 0.4s ease;
+
+            &:hover {
+                transform: scale(1);
+            }
+        }
+
+    }
+
+    // .menu-card__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    // .menu-card__title
+
+    &__title {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 24px;
+        leading-trim: NONE;
+        line-height: 125%;
+        letter-spacing: 0%;
+        margin: 0;
+    }
+
+    // .menu-card__description
+
+    &__description {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 150%;
+        letter-spacing: 0%;
+        margin: 0;
+    }
+
+    // .menu-card__price
+
+    &__price {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 24px;
+        leading-trim: NONE;
+        line-height: 125%;
+        letter-spacing: 0%;
+
+    }
 }
