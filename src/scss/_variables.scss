@@ -1,4 +1,3 @@
-$color-primary: red;
 $color-white: #ffffff;
 
 $text-primary-color: #403F3D;
@@ -15,3 +14,20 @@ $border-inverse-color: #665F55;
 // _variables.scss
 $breakpoint-tablet: 920px;
 $breakpoint-mobile: 716px;
+
+:root {
+    --color-white: #{$color-white};
+
+    --text-primary: #{$text-primary-color};
+    --text-inverse: #{$text-inverse-color};
+    --text-accent: #{$text-accent-color};
+
+    --bg-primary: #{$bg-primary-color};
+    --bg-container: #{$bg-container-color};
+    --bg-overlay: #{$bg-overlay-color};
+
+    --border-primary: #{$border-primary-color};
+    --border-inverse: #{$border-inverse-color};
+    // ...
+    color-scheme: light;
+}

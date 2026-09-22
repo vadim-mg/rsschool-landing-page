@@ -26,7 +26,7 @@
         justify-items: start;
         align-items: center;
         align-content: center;
-        color: $bg-container-color;
+        color: var(--bg-container);
 
 
 
@@ -41,7 +41,7 @@
             align-self: center;
             justify-self: end;
 
-            background-color: #C1B6AD;
+            background-color: var(--border-primary);
             border-radius: 50%;
 
 
@@ -64,17 +64,17 @@
         }
 
         &_active {
-            color: $text-inverse-color;
-            background-color: #665F55;
+            color: var(--text-inverse);
+            background-color: var(--border-inverse);
         }
 
         &:hover {
-            background-color: $border-inverse-color;
-            color: $text-inverse-color;
+            background-color: var(--border-inverse);
+            color: var(--text-inverse);
             cursor: pointer;
 
             .download__button-icon {
-                background-color: $text-inverse-color;
+                background-color: var(--text-inverse);
             }
         }
 
@@ -120,7 +120,7 @@
     opacity: 1;
     border-radius: 40px;
     border-width: 1px;
-    border: 1px solid #C1B6AD;
+    border: 1px solid var(--border-primary);
 
 
     // .menu-card__image

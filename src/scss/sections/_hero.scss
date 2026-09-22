@@ -23,7 +23,7 @@
 
 .hero__content {
   max-width: 530px;
-  color: $color-white;
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -31,8 +31,8 @@
 
 
 .hero__cta {
-  background: $bg-primary-color;
-  color: $text-primary-color;
+  background: var( --bg-primary);
+  color: var( --text-primary);
 
   width: 200px;
   height: 64px;

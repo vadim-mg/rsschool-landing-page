@@ -8,18 +8,19 @@
 
     &__content {
         padding: 100px;
-        background-color: $bg-container-color;
+        background-color: var(--bg-container);
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 100px;
         border-radius: 40px;
+
         @include tablet {
             grid-template-columns: 1fr;
         }
     }
 
     &__header {
-        color: $bg-primary-color;
+        color: var(--bg-primary);
         padding: 0;
     }
 
@@ -45,18 +46,18 @@
     border-radius: 100px;
     border: 1px solid $border-primary-color;
     display: block;
-    color: $border-primary-color;
+    color: var(--border-primary);
     display: flex;
     justify-content: center;
     align-items: center; // .social-media-icon_twitter
 
     &:hover {
-        background: #292826;
+        background: var(--bg-overlay);
         cursor: pointer;
     }
 }
 
-.social-media__link{
+.social-media__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +70,7 @@
     width: 24px;
     height: 24px;
 
-    background-color: $text-inverse-color;
+    background-color: var(--text-inverse);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +107,7 @@
 }
 
 .contacts {
-    color: $bg-primary-color;
+    color: var(--bg-primary);
     font-family: Inter;
     font-style: Semi Bold;
     font-size: 24px;
@@ -125,7 +126,7 @@
         font-size: 16px;
         line-height: 150%;
         position: relative;
-        
+
 
         &::before {
             position: absolute;
@@ -141,9 +142,10 @@
         font-size: 16px;
         line-height: 150%;
         letter-spacing: 0%;
-        color: #E1D4C9;
+        color: var(--text-inverse);
         text-decoration: none;
-        &:hover{
+
+        &:hover {
             text-decoration: underline;
             text-underline-offset: 4px;
         }
@@ -176,7 +178,7 @@
     // .contacts__header
 
     &__header {
-        color: $bg-primary-color;
+        color: var(--bg-primary);
         font-family: Inter;
         font-weight: 600;
         font-style: Semi Bold;

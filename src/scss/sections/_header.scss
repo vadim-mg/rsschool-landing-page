@@ -52,7 +52,7 @@
             font-size: 16px;
             line-height: 150%;
             letter-spacing: 0%;
-            color: $bg-overlay-color;
+            color: var( --bg-overlay);
             text-decoration: none;
 
             &:hover,
@@ -92,7 +92,7 @@
         display: block;
         width: 1rem;
         height: 1px;
-        background-color: $text-primary-color;
+        background-color: var( --text-primary);
     }
 
     &:hover {

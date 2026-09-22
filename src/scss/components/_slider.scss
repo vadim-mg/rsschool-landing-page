@@ -79,7 +79,7 @@
         opacity: 1;
         border-radius: 100px;
         border-width: 1px;
-        border-color: $bg-container-color;
+        border-color: var( --bg-container);
         background-position: center;
         background-repeat: no-repeat;
 
@@ -89,7 +89,7 @@
 
         &:hover {
             cursor: pointer;
-            background-color: $bg-container-color;
+            background-color: var( --bg-container);
             background-image: url('@/images/arrow_invert.svg');
         }
 
@@ -125,10 +125,10 @@
         height: 4px;
         opacity: 1;
         border-radius: 100px;
-        background-color: $border-primary-color;
+        background-color: var( --border-primary);
 
         &_active {
-            background-color: $border-inverse-color;
+            background-color: var( --border-inverse);
         }
     }
 

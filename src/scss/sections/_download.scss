@@ -1,7 +1,7 @@
 @use '../shared' as *;
 
 .download {
-    color: $bg-container-color;
+    color: var( --bg-container);
 
     // .download__content
 
@@ -57,7 +57,8 @@
         justify-items: start;
         align-items: center;
         align-content: center;
-        color: $bg-container-color;
+        color: var( --bg-container);
+        border: 1px solid var( --border-inverse);
 
 
 
@@ -72,7 +73,7 @@
             align-self: center;
             justify-self: end;
 
-            background-color: $text-primary-color;
+            background-color: var( --text-primary);
 
 
             -webkit-mask-size: contain;
@@ -97,12 +98,12 @@
         }
 
         &:hover {
-            background-color: $border-inverse-color;
-            color: $text-inverse-color;
+            background-color: var( --border-inverse);
+            color: var( --text-inverse);
             cursor: pointer;
 
             .download__button-icon {
-                background-color: $text-inverse-color;
+                background-color: var( --text-inverse);
             }
         }
 
