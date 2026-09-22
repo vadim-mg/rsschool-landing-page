@@ -115,6 +115,7 @@
         font-size: 16px;
         line-height: 150%;
         position: relative;
+        
 
         &::before {
             position: absolute;
@@ -131,6 +132,11 @@
         line-height: 150%;
         letter-spacing: 0%;
         color: #E1D4C9;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
     }
 
     &_address {

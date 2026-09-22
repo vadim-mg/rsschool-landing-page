@@ -1,22 +1,24 @@
 .theme-toggle {
-    gap: 8px;
     angle: 0 deg;
     opacity: 1;
     border-width: 1px;
     border-radius: 100px;
     padding: 4px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
 
     // .theme-toggle__knob
 
-    &__knob {}
+    &__knob {
+        display: block;
+    }
 
     // .theme-toggle__option
 
     &__option {
+        display: block;
         width: 2rem;
         height: 2rem;
         angle: 0 deg;
@@ -33,6 +35,8 @@
         }
 
         &_dark {
+            margin-left: 6px;
+            
             background-image: url('@/images/dark.svg');
         }
     }
