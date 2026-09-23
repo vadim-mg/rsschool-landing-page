@@ -1,7 +1,7 @@
 @use '../shared' as *;
 
 .download {
-    color: var( --bg-container);
+    // color: var( --bg-container);
 
     // .download__content
 
@@ -57,7 +57,7 @@
         justify-items: start;
         align-items: center;
         align-content: center;
-        color: var( --bg-container);
+        color: var( --text-primary);
         border: 1px solid var( --border-inverse);
 
 
