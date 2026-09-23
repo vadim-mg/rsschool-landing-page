@@ -1,0 +1,31 @@
+@use '../shared' as *;
+
+
+.round-button {
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid var(--text-primary);
+    background: none;
+    position: relative;
+
+    &_hidden-on-desktop {
+        @include desktop {
+            display: none;
+        }
+    }
+}
+
+.round-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: var(--text-primary);
+}
+
+.round-button_more::before {
+    -webkit-mask: url('@/images/icons/refresh.svg') center / 24px no-repeat;
+    mask: url('@/images/icons/refresh.svg') center / 24px no-repeat;
+}
