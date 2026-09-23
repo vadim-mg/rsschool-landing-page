@@ -1,3 +1,4 @@
+import 'modern-normalize';
 import '../scss/main.scss';
 
 /* Обработчик для плавной прокрутки */
@@ -22,8 +23,8 @@ document.querySelectorAll('a[href*="#"]').forEach(a => {
 const toggle = document.getElementById('theme-toggle');
 
 toggle.addEventListener('click', () => {
-  const html = document.documentElement;
-  const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
-  html.dataset.theme = next;
-  localStorage.setItem('theme', next);
+    const html = document.documentElement;
+    const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    html.dataset.theme = next;
+    localStorage.setItem('theme', next);
 });

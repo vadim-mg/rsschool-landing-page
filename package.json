@@ -11,5 +11,8 @@
   "devDependencies": {
     "sass-embedded": "^1.104.1",
     "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
   }
 }
