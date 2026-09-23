@@ -57,15 +57,32 @@ html {
             @include tablet {
                 line-height: 105%;
             }
+
+            @include mobile {
+                font-size: 32px;
+                line-height: 125%;
+                text-align: center;
+            }
         }
 
         &_h2 {
             font-size: 60px;
             padding-bottom: 40px;
+
+            @include mobile {
+                font-size: 32px;
+                line-height: 125%;
+                text-align: center;
+            }
         }
 
         &_center {
             text-align: center;
+        }
+
+        
+        &_left{
+            text-align: left;
         }
     }
 
@@ -90,6 +107,6 @@ html {
 .content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 100px;
     flex-grow: 2;
 }

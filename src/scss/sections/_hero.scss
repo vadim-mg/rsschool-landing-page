@@ -2,8 +2,13 @@
 
 .hero {}
 
-.hero__caption{
+.hero__caption {
   font-size: 72px;
+
+  @include mobile {
+    font-size: 42px;
+    line-height: 115%;
+  }
 }
 
 .hero__card {

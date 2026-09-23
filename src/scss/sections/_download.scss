@@ -12,6 +12,7 @@
         @include tablet {
             grid-template-columns: 1fr;
             gap: 100px;
+            justify-items: center;
         }
     }
 

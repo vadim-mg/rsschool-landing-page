@@ -59,23 +59,14 @@
     mask-size: 18px;
 }
 
-// &:hover {
-//     cursor: pointer;
-//     background-color: var( --bg-container);
-//     background-image: url('@/images/arrow_invert.svg');
-// }
+.round-button_prev {
+    @include mobile {
+        display: none;
+    }
+}
 
-
-// // .slider__button_prev
-
-// &_prev {
-//     background-image: url('@/images/arrow.svg');
-//     transform: rotate(180deg);
-// }
-
-// // .slider__button_next
-
-// &_next {
-//     background-image: url('@/images/arrow.svg');
-
-// }
+.round-button_next {
+    @include mobile {
+        display: none;
+    }
+}
