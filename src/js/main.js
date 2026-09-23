@@ -3,22 +3,26 @@ import '../scss/main.scss'
 
 import { loadProducts } from './load-products.js'
 import { renderProducts } from './render-products.js'
+import { initCategories, getCurrentActiveCategory } from './init-categories.js'
 
 
-const categories = {
-    'coffee-category': 'coffee',
-    'tea-category': 'tea',
-    'dessert-category': 'dessert',
-}
+// const categories = {
+//     'coffee-category': 'coffee',
+//     'tea-category': 'tea',
+//     'dessert-category': 'dessert',
+// }
 const state = {
-    activeCategory: 'coffee-category'
+    activeCategoryId: 'coffee-category'
 }
 async function init() {
     const products = await loadProducts()
     if (!products.length) return
 
     const container = document.querySelector('.menu-cards')
-    renderProducts(products, container)
+
+    initCategories(state.activeCategoryId, () => {
+        renderProducts(products, container, getCurrentActiveCategory())
+    })
 }
 
 init()
