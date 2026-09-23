@@ -15,6 +15,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    @include mobile {
+        gap: 10px;
+    }
 
     &__button {
         // width: 200px;
