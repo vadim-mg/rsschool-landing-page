@@ -1,7 +1,6 @@
 @use '../shared' as *;
 
-.hero {
-}
+.hero {}
 
 .hero__card {
   border-radius: 40px;
@@ -31,8 +30,8 @@
 
 
 .hero__cta {
-  background: var( --bg-primary);
-  color: var( --text-primary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
 
   width: 200px;
   height: 64px;
@@ -55,14 +54,14 @@
 
   &:hover {
     &::after {
-      content: url('@/images/coffee-cup_dark.svg');
+      content: var(--menu-button-icon);
       margin-left: 8px;
     }
   }
 
   @include tablet {
     &::after {
-      content: url('@/images/coffee-cup_dark.svg');
+      content: var(--menu-button-icon);
       margin-left: 8px;
     }
   }

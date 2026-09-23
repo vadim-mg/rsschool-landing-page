@@ -32,8 +32,8 @@ html {
     margin: 0;
     padding-top: 20px;
     min-height: 100vh;
-    color: var( --text-primary);
-    background-color: var( --bg-primary);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,6 +53,10 @@ html {
 
         &_h1 {
             font-size: 72px;
+
+            @include tablet {
+                line-height: 105%;
+            }
         }
 
         &_h2 {
@@ -69,7 +73,7 @@ html {
     &__title-accent {
         font-style: italic;
         font-weight: 800;
-        color: var( --text-accent);
+        color: var(--text-accent);
     }
 
     &__subtitle {
