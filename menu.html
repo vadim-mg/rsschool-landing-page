@@ -75,101 +75,10 @@
             </button>
           </div>
           <div class="menu-cards">
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-1.jpg" alt="Irish coffee">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Irish coffee</h2>
-                <p class="menu-card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                <div class="menu-card__price">$7.00</div>
-              </div>
-            </div>
-            <!-- Kahlua coffee -->
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-2.jpg" alt="Kahlua coffee">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Kahlua coffee</h2>
-                <p class="menu-card__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed
-                  milk</p>
-                <div class="menu-card__price">$7.00</div>
-              </div>
-            </div>
 
-            <!-- Honey raf -->
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-3.jpg" alt="Honey raf">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Honey raf</h2>
-                <p class="menu-card__description">Espresso with frothed milk, cream and aromatic honey</p>
-                <div class="menu-card__price">$5.50</div>
-              </div>
-            </div>
 
-            <!-- Ice cappuccino -->
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-4.jpg" alt="Ice cappuccino">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Ice cappuccino</h2>
-                <p class="menu-card__description">Cappuccino with soft thick foam in summer version with ice</p>
-                <div class="menu-card__price">$5.00</div>
-              </div>
-            </div>
 
-            <!-- Espresso -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-5.jpg" alt="Espresso">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Espresso</h2>
-                <p class="menu-card__description">Classic black coffee</p>
-                <div class="menu-card__price">$4.50</div>
-              </div>
-            </div>
 
-            <!-- Latte -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-6.jpg" alt="Latte">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Latte</h2>
-                <p class="menu-card__description">Espresso coffee with the addition of steamed milk and dense milk foam
-                </p>
-                <div class="menu-card__price">$5.50</div>
-              </div>
-            </div>
-
-            <!-- Latte macchiato -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-7.jpg" alt="Latte macchiato">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Latte macchiato</h2>
-                <p class="menu-card__description">Espresso with frothed milk and chocolate</p>
-                <div class="menu-card__price">$5.50</div>
-              </div>
-            </div>
-
-            <!-- Coffee with cognac -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="./src/images/cards/coffee-8.jpg" alt="Coffee with cognac">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Coffee with cognac</h2>
-                <p class="menu-card__description">Fragrant black coffee with cognac and whipped cream</p>
-                <div class="menu-card__price">$6.50</div>
-              </div>
-            </div>
 
           </div>
           <button class="round-button round-button_hidden-on-desktop round-button_more"></button>
@@ -182,7 +91,8 @@
     <div class="container">
       <div class="footer__content">
         <div class="footer__content-column">
-          <p class="page__title page__title_h2 footer__header">Sip, Savor, Smile. <br><span class="page__title-accent">It’s
+          <p class="page__title page__title_h2 footer__header">Sip, Savor, Smile. <br><span
+              class="page__title-accent">It’s
               coffee
               time!</span>
           </p>
@@ -214,6 +124,19 @@
       </div>
     </div>
   </footer>
+
+  <template id="menu-card-template">
+    <div class="menu-card">
+      <div class="menu-card__image">
+        <img src="" alt="">
+      </div>
+      <div class="menu-card__content">
+        <h2 class="menu-card__title"></h2>
+        <p class="menu-card__description"></p>
+        <div class="menu-card__price"></div>
+      </div>
+    </div>
+  </template>
 
   <script type="module" src="/src/js/main.js"></script>
 </body>

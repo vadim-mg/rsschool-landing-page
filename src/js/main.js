@@ -1,6 +1,19 @@
 import 'modern-normalize';
 import '../scss/main.scss';
 
+import { loadProducts } from './load-products.js';
+import { renderProducts } from './render-products.js';
+
+async function init() {
+    const products = await loadProducts();
+    if (!products.length) return;
+
+    const container = document.querySelector('.menu-cards');
+    renderProducts(products, container);
+}
+
+init();
+
 /* Обработчик для плавной прокрутки */
 document.querySelectorAll('a[href*="#"]').forEach(a => {
     a.onclick = e => {
