@@ -11,7 +11,8 @@ $KeepInRoot = @(
     '.git',
     '.gitignore',
     'README.md',
-    'dist'
+    'dist',
+    'node_modules'
 )
 # ===================
 
