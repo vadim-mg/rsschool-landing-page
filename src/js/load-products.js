@@ -1,11 +1,11 @@
 const images = import.meta.glob('../images/cards/*.{jpg,jpeg,png,webp}', {
     eager: true,
     import: 'default',
-});
+})
 
 function getImageUrl(fileName) {
-    const entry = Object.entries(images).find(([path]) => path.endsWith(`/${fileName}`));
-    return entry?.[1] ?? '';
+    const entry = Object.entries(images).find(([path]) => path.endsWith(`/${fileName}`))
+    return entry?.[1] ?? ''
 }
 
 export async function loadProducts() {
@@ -20,7 +20,7 @@ export async function loadProducts() {
             'dessert': 0
         }
         return products.map(product => {
-            categories[product.category] += 1;
+            categories[product.category] += 1
             index += 1
             const realImageUrl = getImageUrl(`${product.category}-${categories[product.category]}.png`)
             return ({ ...product, image: `${realImageUrl}`, id: index })
