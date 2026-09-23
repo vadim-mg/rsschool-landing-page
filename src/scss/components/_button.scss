@@ -15,6 +15,21 @@
             display: none;
         }
     }
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--bg-container);
+
+        // background-image: url('@/images/arrow_invert.svg');
+        &::before {
+            background-color: var(--text-inverse);
+
+        }
+
+        html[data-theme="dark"] & {
+            border-color: var(--bg-container);
+        }
+    }
 }
 
 .round-button::before {
@@ -29,3 +44,38 @@
     -webkit-mask: url('@/images/icons/refresh.svg') center / 24px no-repeat;
     mask: url('@/images/icons/refresh.svg') center / 24px no-repeat;
 }
+
+.round-button_prev::before {
+    -webkit-mask: url('@/images/icons/arrow.svg') center / 24px no-repeat;
+    mask: url('@/images/icons/arrow.svg') center / 24px no-repeat;
+    transform: rotate(180deg);
+    mask-size: 18px;
+}
+
+.round-button_next::before {
+    mask-size: 24px 24px;
+    -webkit-mask: url('@/images/icons/arrow.svg') center / 24px no-repeat;
+    mask: url('@/images/icons/arrow.svg') center / 24px no-repeat;
+    mask-size: 18px;
+}
+
+// &:hover {
+//     cursor: pointer;
+//     background-color: var( --bg-container);
+//     background-image: url('@/images/arrow_invert.svg');
+// }
+
+
+// // .slider__button_prev
+
+// &_prev {
+//     background-image: url('@/images/arrow.svg');
+//     transform: rotate(180deg);
+// }
+
+// // .slider__button_next
+
+// &_next {
+//     background-image: url('@/images/arrow.svg');
+
+// }
