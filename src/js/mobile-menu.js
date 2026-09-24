@@ -7,12 +7,17 @@ export class MobileMenu {
         burgerActive: 'burger_active',
         noScroll: 'page_no-scroll',
     }
+    static DESKTOP_QUERY = '(min-width: 769px)'
 
     #menu
     #burgerButton
     #isOpen = false
+    #mql
     #onEsc = (e) => {
         if (e.key === 'Escape' && this.#isOpen) this.close()
+    }
+    #onBreakpoint = (e) => {
+        if (e.matches) this.close()
     }
 
     /**
@@ -30,6 +35,9 @@ export class MobileMenu {
 
         this.#burgerButton.addEventListener('click', () => this.toggle())
         document.addEventListener('keydown', this.#onEsc)
+
+        this.#mql = window.matchMedia(MobileMenu.DESKTOP_QUERY)
+        this.#mql.addEventListener('change', this.#onBreakpoint)
     }
 
     get isOpen() {
@@ -61,6 +69,7 @@ export class MobileMenu {
     destroy() {
         this.close()
         document.removeEventListener('keydown', this.#onEsc)
+        this.#mql.removeEventListener('change', this.#onBreakpoint)
         this.#menu.remove()
     }
 

@@ -45,12 +45,17 @@
     &__nav {
         display: flex;
 
+
+        justify-content: center;
+        gap: 40px;
+
         @include tablet {
             display: none;
         }
 
-        justify-content: center;
-        gap: 40px;
+        @include before-tablet {
+            gap: 24px;
+        }
 
         // .header__nav-link
 
