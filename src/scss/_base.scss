@@ -7,7 +7,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth; // т.к. в браузере может быть отключено, сделал через js, тут отключил чтоб не было конфликта
 }
 
 .container {
