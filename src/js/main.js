@@ -5,6 +5,7 @@ import { loadProducts } from './load-products.js'
 import { renderProducts } from './render-products.js'
 import { initCategories, getCurrentActiveCategory } from './init-categories.js'
 import { MobileMenu } from './mobile-menu.js'
+import { Slider } from './slider.js'
 
 
 // const categories = {
@@ -63,6 +64,6 @@ toggle.addEventListener('click', () => {
     localStorage.setItem('theme', next)
 })
 
-/* Переключение меню */
 const menu = new MobileMenu('#header', '.header__nav-link', '#burger')
 
+const slider = new Slider('.slider');
