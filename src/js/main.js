@@ -64,11 +64,5 @@ toggle.addEventListener('click', () => {
 })
 
 /* Переключение меню */
-const burger = document.getElementById('burger')
-const menu = new MobileMenu('#header', '.header__nav-link')
-// const menu = new MobileMenu('#mobile-menu')
+const menu = new MobileMenu('#header', '.header__nav-link', '#burger')
 
-burger.addEventListener('click', () => {
-    menu.toggle()
-    burger.classList.toggle('burger_active')
-})
