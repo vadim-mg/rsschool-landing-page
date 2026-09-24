@@ -39,6 +39,10 @@ html {
     justify-content: space-between;
     gap: 20px;
 
+    &_no-scroll {
+        overflow: hidden;
+    }
+
     &__title {
         font-family: Inter;
         font-weight: 600;
@@ -80,8 +84,7 @@ html {
             text-align: center;
         }
 
-        
-        &_left{
+        &_left {
             text-align: left;
         }
     }

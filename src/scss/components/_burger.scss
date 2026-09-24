@@ -1,0 +1,42 @@
+@use "../shared" as *;
+
+.burger {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    opacity: 1;
+    border-width: 1px;
+    border-radius: 100px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    .hr {
+        display: block;
+        width: 1rem;
+        height: 1px;
+        background-color: var(--text-primary);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &_active {
+
+        // background-color: var(--bg-container);
+        .hr:first-child {
+            transform: rotate(45deg) translate(3px, 3px);
+        }
+
+        .hr:last-child {
+            transform: rotate(-45deg) translate(3px, -3px);
+        }
+    }
+
+    @include tablet {
+        display: flex;
+    }
+}

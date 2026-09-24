@@ -4,6 +4,7 @@ import '../scss/main.scss'
 import { loadProducts } from './load-products.js'
 import { renderProducts } from './render-products.js'
 import { initCategories, getCurrentActiveCategory } from './init-categories.js'
+import { MobileMenu } from './mobile-menu.js'
 
 
 // const categories = {
@@ -60,4 +61,14 @@ toggle.addEventListener('click', () => {
     const next = html.dataset.theme === 'dark' ? 'light' : 'dark'
     html.dataset.theme = next
     localStorage.setItem('theme', next)
+})
+
+/* Переключение меню */
+const burger = document.getElementById('burger')
+const menu = new MobileMenu('#header', '.header__nav-link')
+// const menu = new MobileMenu('#mobile-menu')
+
+burger.addEventListener('click', () => {
+    menu.toggle()
+    burger.classList.toggle('burger_active')
 })
