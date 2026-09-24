@@ -11,21 +11,28 @@ import { initCategories, getCurrentActiveCategory } from './init-categories.js'
 //     'tea-category': 'tea',
 //     'dessert-category': 'dessert',
 // }
-const state = {
-    activeCategoryId: 'coffee-category'
+
+
+const isMenuPage = !!document.getElementsByClassName('product-menu-page').length
+
+if (isMenuPage) {
+
+    const state = {
+        activeCategoryId: 'coffee-category'
+    }
+    async function init() {
+        const products = await loadProducts()
+        if (!products.length) return
+
+        const container = document.querySelector('.menu-cards')
+
+        initCategories(state.activeCategoryId, () => {
+            renderProducts(products, container, getCurrentActiveCategory())
+        })
+    }
+
+    init()
 }
-async function init() {
-    const products = await loadProducts()
-    if (!products.length) return
-
-    const container = document.querySelector('.menu-cards')
-
-    initCategories(state.activeCategoryId, () => {
-        renderProducts(products, container, getCurrentActiveCategory())
-    })
-}
-
-init()
 
 /* Обработчик для плавной прокрутки */
 document.querySelectorAll('a[href*="#"]').forEach(a => {
