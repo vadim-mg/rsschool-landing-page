@@ -19,6 +19,12 @@ export class Slider {
     #index = 1
     #isAnimating = false
 
+    #touchStartX = 0
+    #touchStartY = 0
+    #isSwiping = false
+
+    static SWIPE_THRESHOLD = 50 // px
+
     /**
      * @param {string} rootSelector
      */
@@ -39,6 +45,9 @@ export class Slider {
 
         this.#jump(this.#index)
         this.#updateDots()
+
+        this.#track.addEventListener('touchstart', (e) => this.#onTouchStart(e), { passive: true })
+        this.#track.addEventListener('touchend', (e) => this.#onTouchEnd(e), { passive: true })
     }
 
     next() {
@@ -117,5 +126,28 @@ export class Slider {
     #getOffset() {
         const gap = parseFloat(getComputedStyle(this.#track).gap) || 0
         return this.#slides[0].getBoundingClientRect().width + gap
+    }
+
+    #onTouchStart(e) {
+        const touch = e.changedTouches[0]
+        this.#touchStartX = touch.clientX
+        this.#touchStartY = touch.clientY
+        this.#isSwiping = true
+    }
+
+    #onTouchEnd(e) {
+        if (!this.#isSwiping) return
+        this.#isSwiping = false
+
+        const touch = e.changedTouches[0]
+        const dx = touch.clientX - this.#touchStartX
+        const dy = touch.clientY - this.#touchStartY
+
+        // игнорируем вертикальные жесты (скролл страницы)
+        if (Math.abs(dx) < Math.abs(dy)) return
+
+        if (Math.abs(dx) < Slider.SWIPE_THRESHOLD) return
+
+        dx < 0 ? this.next() : this.prev()
     }
 }
