@@ -10,28 +10,30 @@
 
     // .slider__slides
 
-    &__slides {
+    &__frame {
         width: 480px;
         margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &__slides {
+        display: flex;
+        gap: 100px;
     }
 
     // .slider__slide
 
     &__slide {
-        display: none;
-        // .slieder__slide_active
-
-        &_active {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     // .slider__image-container
 
-    &__image-container {}
+    &__image-container {
+        width: 480px;
+    }
 
     // .slider__image
 
@@ -79,7 +81,7 @@
         opacity: 1;
         border-radius: 100px;
         border-width: 1px;
-        border-color: var( --bg-container);
+        border-color: var(--bg-container);
         background-position: center;
         background-repeat: no-repeat;
 
@@ -87,26 +89,6 @@
             display: none;
         }
 
-        // &:hover {
-        //     cursor: pointer;
-        //     background-color: var( --bg-container);
-        //     background-image: url('@/images/arrow_invert.svg');
-        // }
-
-
-        // // .slider__button_prev
-
-        // &_prev {
-        //     background-image: url('@/images/arrow.svg');
-        //     transform: rotate(180deg);
-        // }
-
-        // // .slider__button_next
-
-        // &_next {
-        //     background-image: url('@/images/arrow.svg');
-
-        // }
     }
 
     // .slider__pagination
@@ -125,10 +107,16 @@
         height: 4px;
         opacity: 1;
         border-radius: 100px;
-        background-color: var( --border-primary);
+        background-color: var(--border-primary);
+        transition: background-color 0.3s ease;
 
         &_active {
-            background-color: var( --border-inverse);
+            background-color: var(--border-inverse);
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--border-inverse);
         }
     }
 

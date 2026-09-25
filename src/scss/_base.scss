@@ -31,6 +31,7 @@ html {
 .page {
     margin: 0;
     padding-top: 20px;
+    padding-bottom: 20px;
     min-height: 100vh;
     color: var(--text-primary);
     background-color: var(--bg-primary);
@@ -38,6 +39,10 @@ html {
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+
+    &_no-scroll {
+        overflow: hidden;
+    }
 
     &__title {
         font-family: Inter;
@@ -80,8 +85,7 @@ html {
             text-align: center;
         }
 
-        
-        &_left{
+        &_left {
             text-align: left;
         }
     }
