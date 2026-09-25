@@ -25,7 +25,11 @@ export function renderProducts(products, container, categoryId, all = false) {
 
     const moreButton = document.querySelector('.round-button_more')
     const canShowMore = cardsCount > onTabletAndMobileMaxCardsCount && !all
-    moreButton.style.display = canShowMore ? 'block' : 'none'
+    if(canShowMore) {
+        moreButton.classList.remove('round-button_hidden')
+    } else {
+        moreButton.classList.add('round-button_hidden')
+    }
 
     moreButton.addEventListener('click', () => {
         renderProducts(products, container, categoryId, true)

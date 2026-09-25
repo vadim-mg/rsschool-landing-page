@@ -19,6 +19,10 @@
         }
     }
 
+    &_hidden {
+        display: none;
+    }
+
     &:hover {
         cursor: pointer;
         background-color: var(--bg-container);
@@ -47,6 +51,7 @@
 }
 
 .round-button_more::before {
+    display: block;
     -webkit-mask: url('@/images/icons/refresh.svg') center / 24px no-repeat;
     mask: url('@/images/icons/refresh.svg') center / 24px no-repeat;
 }
