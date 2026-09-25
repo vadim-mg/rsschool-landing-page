@@ -18,22 +18,22 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <script type="module" crossorigin src="/rsschool-landing-page/assets/main-BHEejV8q.js"></script>
-  <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/main-BmOJL4E7.css">
+  <script type="module" crossorigin src="/rsschool-landing-page/assets/main-BiQcdqQt.js"></script>
+  <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/main-cVJMA5FG.css">
 </head>
 
-<body class="page">
+<body class="page product-menu-page">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container header__inner">
       <a href="index.html" class="logo">
         <span class="logo__image"></span>
       </a>
       <nav class="header__nav">
-        <a href="index.html#favorite" class="header__nav__link">Favorite coffee</a>
-        <a href="index.html#about" class="header__nav__link">About</a>
-        <a href="index.html#mobile" class="header__nav__link">Mobile app</a>
-        <a href="index.html#contacts" class="header__nav__link">Contact us</a>
+        <a href="index.html#favorite" class="header__nav-link">Favorite coffee</a>
+        <a href="index.html#about" class="header__nav-link">About</a>
+        <a href="index.html#mobile" class="header__nav-link">Mobile app</a>
+        <a href="index.html#contacts" class="header__nav-link">Contact us</a>
       </nav>
 
       <div class="header__right">
@@ -42,13 +42,13 @@
           <span class="theme-toggle__option theme-toggle__option_dark"></span>
         </button>
 
-        <button class="burger" id="burger" aria-label="Меню">
+        <button class="burger" id="burger" aria-label="Menu">
           <span class="hr"></span>
           <span class="hr"></span>
         </button>
 
-        <a href="menu.html" class="header__nav__link menu__button" id="menu-button">
-          Меню <span class="menu__button-icon"></span>
+        <a href="menu.html" class="header__nav-link menu__button" id="menu-button">
+          Menu <span class="menu__button-icon"></span>
         </a>
       </div>
     </div>
@@ -63,116 +63,21 @@
               class="page__title-accent">amazing surprise</span>
           </h1>
           <div class="menu-filters">
-            <button class="menu-filters__button menu-filters__button_active">
-              <span class="menu-filters__button-icon menu-filters__button-icon_tea"></span>
-              <span class="menu-filters__button-caption">Tea</span>
-            </button>
-            <button class="menu-filters__button">
+            <!-- menu-filters__button_active -->
+            <button class="menu-filters__button" id="coffee-category">
               <span class="menu-filters__button-icon menu-filters__button-icon_coffee"></span>
               <span class="menu-filters__button-caption">Coffee</span>
             </button>
-            <button class="menu-filters__button">
+            <button class="menu-filters__button" id="tea-category">
+              <span class="menu-filters__button-icon menu-filters__button-icon_tea"></span>
+              <span class="menu-filters__button-caption">Tea</span>
+            </button>
+            <button class="menu-filters__button" id="dessert-category">
               <span class="menu-filters__button-icon menu-filters__button-icon_desert"></span>
               <span class="menu-filters__button-caption">Desert</span>
             </button>
           </div>
           <div class="menu-cards">
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-1-DAeLJmeB.jpg" alt="Irish coffee">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Irish coffee</h2>
-                <p class="menu-card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                <div class="menu-card__price">$7.00</div>
-              </div>
-            </div>
-            <!-- Kahlua coffee -->
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-2-B8NJhLW4.jpg" alt="Kahlua coffee">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Kahlua coffee</h2>
-                <p class="menu-card__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed
-                  milk</p>
-                <div class="menu-card__price">$7.00</div>
-              </div>
-            </div>
-
-            <!-- Honey raf -->
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-3-BRY-xrtS.jpg" alt="Honey raf">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Honey raf</h2>
-                <p class="menu-card__description">Espresso with frothed milk, cream and aromatic honey</p>
-                <div class="menu-card__price">$5.50</div>
-              </div>
-            </div>
-
-            <!-- Ice cappuccino -->
-            <div class="menu-card">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-4-XRcGzxfo.jpg" alt="Ice cappuccino">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Ice cappuccino</h2>
-                <p class="menu-card__description">Cappuccino with soft thick foam in summer version with ice</p>
-                <div class="menu-card__price">$5.00</div>
-              </div>
-            </div>
-
-            <!-- Espresso -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-5-D3H_bl1j.jpg" alt="Espresso">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Espresso</h2>
-                <p class="menu-card__description">Classic black coffee</p>
-                <div class="menu-card__price">$4.50</div>
-              </div>
-            </div>
-
-            <!-- Latte -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-6-u5TW55VH.jpg" alt="Latte">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Latte</h2>
-                <p class="menu-card__description">Espresso coffee with the addition of steamed milk and dense milk foam
-                </p>
-                <div class="menu-card__price">$5.50</div>
-              </div>
-            </div>
-
-            <!-- Latte macchiato -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-7-BbJifTDb.jpg" alt="Latte macchiato">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Latte macchiato</h2>
-                <p class="menu-card__description">Espresso with frothed milk and chocolate</p>
-                <div class="menu-card__price">$5.50</div>
-              </div>
-            </div>
-
-            <!-- Coffee with cognac -->
-            <div class="menu-card menu-card_extra">
-              <div class="menu-card__image">
-                <img src="/rsschool-landing-page/assets/coffee-8-C9B2_lm2.jpg" alt="Coffee with cognac">
-              </div>
-              <div class="menu-card__content">
-                <h2 class="menu-card__title">Coffee with cognac</h2>
-                <p class="menu-card__description">Fragrant black coffee with cognac and whipped cream</p>
-                <div class="menu-card__price">$6.50</div>
-              </div>
-            </div>
-
           </div>
           <button class="round-button round-button_hidden-on-desktop round-button_more"></button>
         </div>
@@ -184,7 +89,8 @@
     <div class="container">
       <div class="footer__content">
         <div class="footer__content-column">
-          <p class="page__title page__title_h2 footer__header">Sip, Savor, Smile. <br><span class="page__title-accent">It’s
+          <p class="page__title page__title_h2 footer__header">Sip, Savor, Smile. <br><span
+              class="page__title-accent">It’s
               coffee
               time!</span>
           </p>
@@ -216,6 +122,19 @@
       </div>
     </div>
   </footer>
+
+  <template id="menu-card-template">
+    <div class="menu-card">
+      <div class="menu-card__image">
+        <img src="" alt="">
+      </div>
+      <div class="menu-card__content">
+        <h2 class="menu-card__title"></h2>
+        <p class="menu-card__description"></p>
+        <div class="menu-card__price"></div>
+      </div>
+    </div>
+  </template>
 
 </body>
 
