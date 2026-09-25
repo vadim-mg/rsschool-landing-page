@@ -15,6 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
     @include mobile {
         gap: 10px;
     }
@@ -54,11 +55,6 @@
             background-color: var(--border-primary);
             border-radius: 50%;
 
-
-
-
-            // .icon_apple
-
             &_coffee {
                 background-image: url('@/images/icons/coffee.png');
             }
@@ -70,7 +66,24 @@
             &_desert {
                 background-image: url('@/images/icons/desert.png');
             }
+        }
 
+        &-symbol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            
+            background-color: var(--border-primary);
+            color: var(--text-primary);
+
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
         }
 
         &_active {

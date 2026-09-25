@@ -6,7 +6,7 @@ let currentActiveCategory
  */
 function setStateForCategories(categoryId) {
     currentActiveCategory = categoryId
-    document.querySelectorAll('.menu-filters__button').forEach(button => {
+    document.querySelectorAll('.menu__content .menu-filters__button').forEach(button => {
         button.classList.remove('menu-filters__button_active')
         if (button.id === currentActiveCategory) button.classList.add('menu-filters__button_active')
     })
@@ -17,7 +17,7 @@ function setStateForCategories(categoryId) {
  * @param {function} renderFunction 
  */
 function setEventListenersForCategories(renderFunction) {
-    document.querySelectorAll('.menu-filters__button').forEach(button => {
+    document.querySelectorAll('.menu__content .menu-filters__button').forEach(button => {
         button.addEventListener('click', () => {
             setStateForCategories(button.id)
             renderFunction()
