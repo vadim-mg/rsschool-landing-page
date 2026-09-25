@@ -89,26 +89,6 @@
             display: none;
         }
 
-        // &:hover {
-        //     cursor: pointer;
-        //     background-color: var( --bg-container);
-        //     background-image: url('@/images/arrow_invert.svg');
-        // }
-
-
-        // // .slider__button_prev
-
-        // &_prev {
-        //     background-image: url('@/images/arrow.svg');
-        //     transform: rotate(180deg);
-        // }
-
-        // // .slider__button_next
-
-        // &_next {
-        //     background-image: url('@/images/arrow.svg');
-
-        // }
     }
 
     // .slider__pagination
@@ -128,8 +108,14 @@
         opacity: 1;
         border-radius: 100px;
         background-color: var(--border-primary);
+        transition: background-color 0.3s ease;
 
         &_active {
+            background-color: var(--border-inverse);
+        }
+
+        &:hover {
+            cursor: pointer;
             background-color: var(--border-inverse);
         }
     }

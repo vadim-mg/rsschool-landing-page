@@ -9,6 +9,9 @@
     border: 1px solid var(--text-primary);
     background: none;
     position: relative;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
 
     &_hidden-on-desktop {
         @include desktop {
@@ -38,6 +41,9 @@
     inset: 0;
     border-radius: inherit;
     background-color: var(--text-primary);
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
 .round-button_more::before {

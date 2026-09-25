@@ -58,9 +58,11 @@
         justify-items: start;
         align-items: center;
         align-content: center;
-        color: var( --text-primary);
-        border: 1px solid var( --border-inverse);
+        color: var(--text-primary);
+        border: 1px solid var(--border-inverse);
 
+        transition: background-color 0.3s ease,
+            color 0.3s ease;
 
 
         &-icon {
@@ -74,7 +76,7 @@
             align-self: center;
             justify-self: end;
 
-            background-color: var( --text-primary);
+            background-color: var(--text-primary);
 
 
             -webkit-mask-size: contain;
@@ -83,6 +85,8 @@
             mask-repeat: no-repeat;
             -webkit-mask-position: center;
             mask-position: center;
+            transition: background-color 0.3s ease,
+                color 0.3s ease;
 
 
             // .icon_apple
@@ -99,12 +103,12 @@
         }
 
         &:hover {
-            background-color: var( --border-inverse);
-            color: var( --text-inverse);
+            background-color: var(--border-inverse);
+            color: var(--text-inverse);
             cursor: pointer;
 
             .download__button-icon {
-                background-color: var( --text-inverse);
+                background-color: var(--text-inverse);
             }
         }
 

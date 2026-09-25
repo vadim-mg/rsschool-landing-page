@@ -12,11 +12,11 @@
     text-decoration: none;
     color: inherit;
     border-bottom: 1.5px solid transparent;
-    transition: border-color 0.2s;
 
     &:not(.header__nav-link_active):hover {
         text-decoration: none;
         border-color: currentColor;
+        transition: border-color 0.2s;
     }
 
     &-icon {
@@ -58,6 +58,10 @@
         }
 
         // .header__nav-link
+        &-link:not(.menu__button) {
+            text-decoration: underline;
+            text-decoration-color: transparent;
+        }
 
         &-link {
             font-family: Inter;
@@ -67,16 +71,25 @@
             line-height: 150%;
             letter-spacing: 0%;
             color: var(--text-primary);
-            text-decoration: none;
+            text-underline-offset: 5px;
+            transition: text-decoration-color 0.3s ease;
 
-            &:hover,
-            &_active {
-                text-decoration: underline;
-                text-underline-offset: 5px;
+            // &:hover,
+            // &_active {
+            //     text-decoration-color: var(--text-primary);
+            //     cursor: pointer;
+            // }
+            &:hover {
+                text-decoration-color: var(--text-primary);
                 cursor: pointer;
             }
 
+            &_active {
+                text-decoration-color: var(--text-primary);
+                cursor: pointer;
+            }
         }
+
     }
 
     // .header__right
