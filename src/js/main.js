@@ -1,11 +1,11 @@
 import 'modern-normalize'
 import '../scss/main.scss'
 
-import { loadProducts } from './load-products.js'
+import { Products } from './Products.js'
 import { renderProducts } from './render-products.js'
 import { Categories } from './Categories.js'
-import { MobileMenu } from './mobile-menu.js'
-import { Slider } from './slider.js'
+import { MobileMenu } from './MobileMenu.js'
+import { Slider } from './Slider.js'
 
 /* Обработчик для плавной прокрутки */
 document.querySelectorAll('a[href*="#"]').forEach(a => {
@@ -42,13 +42,14 @@ const isMenuPage = !!document.getElementsByClassName('product-menu-page').length
 if (isMenuPage) {
 
     async function init() {
-        const products = await loadProducts()
-        if (!products.length) return
+        const products = await Products.create()
+
+        if (!products.items.length) return
 
         const menuCardsContainer = document.querySelector('.menu-cards')
 
         const categories = new Categories(Categories.COFFEE, (categoryId) => {
-            renderProducts(products, menuCardsContainer, categoryId)
+            renderProducts(products.items, menuCardsContainer, categoryId)
         })
 
 
@@ -56,14 +57,16 @@ if (isMenuPage) {
             const target = e.target.closest('.menu-card')
             if (!target) return
 
-            console.log(target)
-            if (target.classList.contains('menu-card')) {
-                const cardId = target.dataset.id
-                console.log('Клик по карточке:', cardId)
-                if (!cardId) return
-                console.log('данные карточки:', products[cardId - 1])
-                // todo: показать карточку
-            }
+            products.showCard(target.dataset.id)
+
+            // console.log(target)
+            // if (target.classList.contains('menu-card')) {
+            //     const cardId = target.dataset.id
+            //     console.log('Клик по карточке:', cardId)
+            //     if (!cardId) return
+            //     console.log('данные карточки:', products.items[cardId - 1])
+            //     // todo: показать карточку
+            // }
         })
     }
 

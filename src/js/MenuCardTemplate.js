@@ -1,4 +1,4 @@
-export class MenuCard {
+export class MenuCardTemplate {
 
     constructor(product, hiddenOnTabletAndMobile = false) {
         const template = document.getElementById('menu-card-template')

@@ -29,7 +29,7 @@ export class Categories {
         this.#currentActiveCategory = categoryId
         document.querySelectorAll('.menu__content .menu-filters__button').forEach(button => {
             button.classList.remove('menu-filters__button_active')
-            if (button.id === this.$currentActiveCategory) button.classList.add('menu-filters__button_active')
+            if (button.id === this.#currentActiveCategory) button.classList.add('menu-filters__button_active')
         })
     }
 
