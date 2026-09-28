@@ -91,6 +91,11 @@
         gap: 8px;
     }
 
+    .popup__options-group_only-one .menu-filters__button_active:hover {
+        cursor: inherit;
+        background: var(--text-primary);
+    }
+
     // .popup__total-row
 
     &__total-row {

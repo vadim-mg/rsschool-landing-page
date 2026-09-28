@@ -75,7 +75,7 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            
+
             background-color: var(--border-primary);
             color: var(--text-primary);
 
@@ -86,13 +86,8 @@
             letter-spacing: 0%;
         }
 
-        &_active {
-            color: var(--text-inverse);
-            background-color: var(--bg-container);
-        }
-
         &:hover {
-            background-color: var(--border-inverse);
+            background-color: var(--bg-overlay);
             color: var(--text-inverse);
             cursor: pointer;
 
@@ -100,6 +95,16 @@
                 background-color: var(--text-inverse);
             }
         }
+
+        &_active {
+            color: var(--text-inverse);
+            background-color: var(--text-primary);
+
+            &:hover {
+                background-color: #0a0a0a;
+            }
+        }
+
 
         // .download__button-text
 

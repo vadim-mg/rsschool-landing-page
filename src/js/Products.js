@@ -105,6 +105,9 @@ export class Products {
 
         const group = document.createElement('div')
         group.className = 'popup__options-group menu-filters'
+        if(canBeOnlyOne){
+            group.classList.add('popup__options-group_only-one')
+        }
 
         Object.entries(items).forEach(([key, item], i) => {
             const button = document.createElement('button')
