@@ -3,38 +3,9 @@ import '../scss/main.scss'
 
 import { loadProducts } from './load-products.js'
 import { renderProducts } from './render-products.js'
-import { initCategories, getCurrentActiveCategory } from './init-categories.js'
+import { Categories } from './Categories.js'
 import { MobileMenu } from './mobile-menu.js'
 import { Slider } from './slider.js'
-
-
-// const categories = {
-//     'coffee-category': 'coffee',
-//     'tea-category': 'tea',
-//     'dessert-category': 'dessert',
-// }
-
-
-const isMenuPage = !!document.getElementsByClassName('product-menu-page').length
-
-if (isMenuPage) {
-
-    const state = {
-        activeCategoryId: 'coffee-category'
-    }
-    async function init() {
-        const products = await loadProducts()
-        if (!products.length) return
-
-        const container = document.querySelector('.menu-cards')
-
-        initCategories(state.activeCategoryId, () => {
-            renderProducts(products, container, getCurrentActiveCategory())
-        })
-    }
-
-    init()
-}
 
 /* Обработчик для плавной прокрутки */
 document.querySelectorAll('a[href*="#"]').forEach(a => {
@@ -66,4 +37,39 @@ toggle.addEventListener('click', () => {
 
 const menu = new MobileMenu('#header', '.header__nav-link', '#burger')
 
-const slider = new Slider('.slider');
+const isMenuPage = !!document.getElementsByClassName('product-menu-page').length
+
+if (isMenuPage) {
+
+    async function init() {
+        const products = await loadProducts()
+        if (!products.length) return
+
+        const menuCardsContainer = document.querySelector('.menu-cards')
+
+        const categories = new Categories(Categories.COFFEE, (categoryId) => {
+            renderProducts(products, menuCardsContainer, categoryId)
+        })
+
+
+        menuCardsContainer.addEventListener('click', e => {
+            const target = e.target.closest('.menu-card')
+            if (!target) return
+
+            console.log(target)
+            if (target.classList.contains('menu-card')) {
+                const cardId = target.dataset.id
+                console.log('Клик по карточке:', cardId)
+                if (!cardId) return
+                console.log('данные карточки:', products[cardId - 1])
+                // todo: показать карточку
+            }
+        })
+    }
+
+    init()
+} else {
+    const slider = new Slider('.slider');
+}
+
+

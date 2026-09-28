@@ -1,4 +1,4 @@
-import { createMenuCard } from './create-menu-card.js'
+import { MenuCard } from './menu-card.js'
 
 const onTabletAndMobileMaxCardsCount = 4
 
@@ -20,7 +20,7 @@ export function renderProducts(products, container, categoryId, all = false) {
         if (`${product.category}-category` !== categoryId) return
         cardsCount += 1
         const hiddenOnTabletAndMobile = !all && cardsCount > onTabletAndMobileMaxCardsCount
-        fragment.appendChild(createMenuCard(product, hiddenOnTabletAndMobile))
+        fragment.appendChild(new MenuCard(product, hiddenOnTabletAndMobile))
     })
 
     const moreButton = document.querySelector('.round-button_more')
