@@ -12,11 +12,11 @@
     text-decoration: none;
     color: inherit;
     border-bottom: 1.5px solid transparent;
-    transition: border-color 0.2s;
 
-    &:not(.header__nav__link_active):hover {
+    &:not(.header__nav-link_active):hover {
         text-decoration: none;
         border-color: currentColor;
+        transition: border-color 0.2s;
     }
 
     &-icon {
@@ -24,11 +24,13 @@
         width: 20px;
         height: 20px;
         background-image: var(--menu-button-icon);
+        background-size: 100%;
     }
 }
 
 
 .header {
+    position: relative;
 
     // .header__inner
 
@@ -43,16 +45,25 @@
     &__nav {
         display: flex;
 
-        @include tablet {
-            display: none;
-        }
 
         justify-content: center;
         gap: 40px;
 
-        // .header__nav__link
+        @include tablet {
+            display: none;
+        }
 
-        &__link {
+        @include before-tablet {
+            gap: 24px;
+        }
+
+        // .header__nav-link
+        &-link:not(.menu__button) {
+            text-decoration: underline;
+            text-decoration-color: transparent;
+        }
+
+        &-link {
             font-family: Inter;
             font-weight: 600;
             font-style: Semi Bold;
@@ -60,16 +71,25 @@
             line-height: 150%;
             letter-spacing: 0%;
             color: var(--text-primary);
-            text-decoration: none;
+            text-underline-offset: 5px;
+            transition: text-decoration-color 0.3s ease;
 
-            &:hover,
-            &_active {
-                text-decoration: underline;
-                text-underline-offset: 5px;
+            // &:hover,
+            // &_active {
+            //     text-decoration-color: var(--text-primary);
+            //     cursor: pointer;
+            // }
+            &:hover {
+                text-decoration-color: var(--text-primary);
                 cursor: pointer;
             }
 
+            &_active {
+                text-decoration-color: var(--text-primary);
+                cursor: pointer;
+            }
         }
+
     }
 
     // .header__right
@@ -78,42 +98,5 @@
         display: flex;
         align-items: center;
         gap: 20px;
-    }
-}
-
-.burger {
-    position: relative;
-    width: 44px;
-    height: 44px;
-    // angle: 0 deg;
-    opacity: 1;
-    border-width: 1px;
-    border-radius: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-
-    .hr {
-        display: block;
-        width: 1rem;
-        height: 1px;
-        background-color: var(--text-primary);
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
-
-}
-
-.burger {
-    display: none;
-
-
-
-    @include tablet {
-        display: flex;
     }
 }

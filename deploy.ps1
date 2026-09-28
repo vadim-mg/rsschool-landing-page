@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 # ==== НАСТРОЙКИ ====
-$SourceBranch = 'landing-pages'
+$SourceBranch = 'landing-pages-part-2'
 $TargetBranch = 'github-pages'
 $DistDir      = 'dist'
 $Remote       = 'origin'
@@ -77,12 +77,12 @@ try {
         Warn "Изменений нет — нечего коммитить"
     } else {
         $stamp = Get-Date -Format 'yyyy-MM-dd HH:mm'
-        # Invoke-Git @('commit', '-m', "deploy: $stamp")
+        Invoke-Git @('commit', '-m', "deploy: $stamp")
         Ok "Коммит создан"
     }
 
     Info "Пуш в $Remote/$TargetBranch"
-    # Invoke-Git @('push', $Remote, $TargetBranch)
+    Invoke-Git @('push', $Remote, $TargetBranch)
     Ok "Запушено"
 }
 finally {

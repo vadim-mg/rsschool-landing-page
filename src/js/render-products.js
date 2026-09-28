@@ -1,0 +1,39 @@
+import { MenuCardTemplate } from './MenuCardTemplate.js'
+
+const onTabletAndMobileMaxCardsCount = 4
+
+
+/**
+ * 
+ * @param {array} products 
+ * @param {Element} container 
+ * @param {string} categoryId 
+ * @param {boolean} all - show all products
+ */
+export function renderProducts(products, container, categoryId, all = false) {
+    const fragment = document.createDocumentFragment()
+
+    console.log(products)
+
+    let cardsCount = 0
+    products.forEach(product => {
+        if (`${product.category}-category` !== categoryId) return
+        cardsCount += 1
+        const hiddenOnTabletAndMobile = !all && cardsCount > onTabletAndMobileMaxCardsCount
+        fragment.appendChild(new MenuCardTemplate(product, hiddenOnTabletAndMobile))
+    })
+
+    const moreButton = document.querySelector('.round-button_more')
+    const canShowMore = cardsCount > onTabletAndMobileMaxCardsCount && !all
+    if(canShowMore) {
+        moreButton.classList.remove('round-button_hidden')
+    } else {
+        moreButton.classList.add('round-button_hidden')
+    }
+
+    moreButton.addEventListener('click', () => {
+        renderProducts(products, container, categoryId, true)
+    })
+
+    container.replaceChildren(fragment)
+}

@@ -15,6 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
     @include mobile {
         gap: 10px;
     }
@@ -36,6 +37,7 @@
         background-color: var(--bg-primary);
         border-color: (--text-primary);
         padding-right: 1rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
 
 
@@ -53,11 +55,6 @@
             background-color: var(--border-primary);
             border-radius: 50%;
 
-
-
-
-            // .icon_apple
-
             &_coffee {
                 background-image: url('@/images/icons/coffee.png');
             }
@@ -69,16 +66,28 @@
             &_desert {
                 background-image: url('@/images/icons/desert.png');
             }
-
         }
 
-        &_active {
-            color: var(--text-inverse);
-            background-color: var(--bg-container);
+        &-symbol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            background-color: var(--border-primary);
+            color: var(--text-primary);
+
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
         }
 
         &:hover {
-            background-color: var(--border-inverse);
+            background-color: var(--bg-overlay);
             color: var(--text-inverse);
             cursor: pointer;
 
@@ -86,6 +95,16 @@
                 background-color: var(--text-inverse);
             }
         }
+
+        &_active {
+            color: var(--text-inverse);
+            background-color: var(--text-primary);
+
+            &:hover {
+                background-color: #0a0a0a;
+            }
+        }
+
 
         // .download__button-text
 

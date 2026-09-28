@@ -60,10 +60,20 @@
   letter-spacing: 0%;
   text-align: center;
   text-decoration: none;
+  padding-left: 24px;
+  transition: padding-left 0.3s ease-in-out;
+  &::after {
+    content: var(--menu-button-icon);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    margin-left: 8px;
+  }
 
   &:hover {
+    padding-left: 0;
     &::after {
       content: var(--menu-button-icon);
+      opacity: 1;
       margin-left: 8px;
     }
   }
@@ -71,6 +81,7 @@
   @include tablet {
     &::after {
       content: var(--menu-button-icon);
+      opacity: 1;
       margin-left: 8px;
     }
   }

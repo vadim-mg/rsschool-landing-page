@@ -34,6 +34,7 @@
         &_light {
             background-image: url('@/images/icons/sun.svg');
             background-color: var(--text-accent);
+            transition: background-color 0.3s ease;
 
             html[data-theme="dark"] & {
                 background-color: var(--bg-primary);
@@ -42,8 +43,8 @@
 
         &_dark {
             margin-left: 6px;
-
             background-image: url('@/images/dark.svg');
+            transition: background-color 0.3s ease;
 
             html[data-theme="dark"] & {
                 background-color: var(--text-accent);
@@ -58,6 +59,7 @@
     &:hover &__option {
 
         &_light {
+            transition: background-color 0.3s ease;
             html[data-theme="dark"] & {
                 background-color: var(--bg-container);
             }

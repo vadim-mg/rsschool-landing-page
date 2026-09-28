@@ -12,8 +12,10 @@ $border-primary-color: #C1B6AD;
 $border-inverse-color: #665F55;
 
 // _variables.scss
-$breakpoint-tablet: 920px;
-$breakpoint-mobile: 716px;
+$breakpoint-before-tablet: 920px;
+$breakpoint-tablet: 769px;
+$breakpoint-before-mobile: 550px;
+$breakpoint-mobile: 425px;
 
 :root {
     color-scheme: light;

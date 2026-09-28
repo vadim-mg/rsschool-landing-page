@@ -7,9 +7,21 @@
   }
 }
 
+@mixin before-mobile {
+  @media(max-width: $breakpoint-before-mobile) {
+    @content;
+  }
+}
+
 // Desktop-first (max-width)
 @mixin tablet {
-  @media /* (min-width: $breakpoint-mobile) and */ (max-width: $breakpoint-tablet) {
+  @media(max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin before-tablet {
+  @media(max-width: $breakpoint-before-tablet) {
     @content;
   }
 }
