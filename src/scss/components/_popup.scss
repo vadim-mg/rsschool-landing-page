@@ -33,7 +33,11 @@
 
     // .popup__image-column
 
-    &__image-column {}
+    &__image-column {
+        @include before-mobile {
+            display: none;
+        }
+    }
 
     // .popup__image
 
