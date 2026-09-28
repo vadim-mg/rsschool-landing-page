@@ -12,6 +12,11 @@
 
     &__frame {
         width: 480px;
+
+        @include tablet {
+            width: 340px;
+        }
+
         margin: 0 auto;
         overflow: hidden;
     }
@@ -33,6 +38,10 @@
 
     &__image-container {
         width: 480px;
+
+        @include tablet {
+            width: 340px;
+        }
     }
 
     // .slider__image
@@ -85,7 +94,7 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        @include mobile {
+        @include before-mobile {
             display: none;
         }
 
